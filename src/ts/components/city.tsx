@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-// import styles from './styles';
 import { SetCity } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight, ICity } from '../Store';
 

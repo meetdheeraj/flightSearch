@@ -1,11 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
-// import styles from './styles';
 import { SetFlightList } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight, ICity } from '../Store';
-// import * as flightList1 from './../../json/data.json';
 import Flight from './flightItem';
 import NoDataContainer from './noDataComponent';
 var flightList = require('./../../json/data.json');

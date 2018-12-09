@@ -13,5 +13,4 @@ export interface IFlightAppState {
     date: string;
     city: ICity;
 	flightList: IFlight[];
-	welcomeMessage: string; // remove this
 }

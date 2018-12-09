@@ -1,8 +1,5 @@
 import * as React from 'react';
-import { connect, MapStateToProps, MapDispatchToProps } from 'react-redux';
-
-import AppStore from './Store';
-import { SetNewMessage } from './actions/AppStoreActions';
+import { connect } from 'react-redux';
 import { IFlightAppState, IFlight, ICity } from './StoreTypes';
 import DateComponent from './components/date';
 import CityComponent from './components/city';
@@ -23,7 +20,6 @@ interface AppDispatchProperties {
 	onInputChange: Function;
 }
 
-// notice: with "AppStateProperties & AppDispatchProperties" we merge the properties to get access and autocomplete to both objects
 export class App extends React.Component<AppStateProperties & AppDispatchProperties, IAppState>
 {
 	constructor(props) {
@@ -33,7 +29,6 @@ export class App extends React.Component<AppStateProperties & AppDispatchPropert
 		flight: { city: this.props.city, price: 4356, date: this.props.date } };
 	}
 	render() {
-		// const flight: IFlight = {city: this.props.city, price: 4356, date: this.props.date};
 		return (
 			<div>
 				<div id="header">
@@ -59,18 +54,9 @@ export class App extends React.Component<AppStateProperties & AppDispatchPropert
 	}
 }
 
-// we need to map the !!root!! store state to the component properties
 const mapStateToProps = (state: IFlightAppState, ownProp?: any): AppStateProperties => ({
 	date: state.date,
 	city: state.city
 });
 
-// here we define all actions that are exposed to the component through the component properties
-const mapDispatchToProps = (dispatch: any): AppDispatchProperties => ({
-	onInputChange: (event: React.ChangeEvent<HTMLInputElement>) => {
-		dispatch(SetNewMessage(event.target.value))
-	}
-});
-
-// finally we need to export our redux connected component
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, {})(App);

@@ -20,7 +20,6 @@ export const initialState: IFlightAppState = {
 			date: new Date().toString()
 		},
 	],
-	welcomeMessage: "Hello World!",
 }
 
 export function AppReducer(state: IFlightAppState, action: IFlightAppAction): IFlightAppState {
@@ -32,7 +31,6 @@ export function AppReducer(state: IFlightAppState, action: IFlightAppAction): IF
 		case "SET_WELCOME_MESSAGE":
 			var newState: IFlightAppState = {
 				...state,
-				welcomeMessage: action.welcomeMessage
 			}
 
 			return object_assign({}, state, newState);

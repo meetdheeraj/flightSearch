@@ -1,0 +1,112 @@
+[
+  {
+    "flightName": "AI-213",
+    "city": {
+      "fromCity": "Pune",
+      "toCity": "New Delhi"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4300",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "AI-234",
+    "city": {
+      "fromCity": "New Delhi",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "5000",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "JA-657",
+    "city": {
+      "fromCity": "Mumbai",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "2000",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "JA-887",
+    "city": {
+      "fromCity": "Mumbai",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "5400",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "IN-546",
+    "city": {
+      "fromCity": "Hyderabad",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4000",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "IN-786",
+    "city": {
+      "fromCity": "Pune",
+      "toCity": "Mumbai"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "3500",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "EM-890",
+    "city": {
+      "fromCity": "Mumbai",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "6000",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "EM-702",
+    "city": {
+      "fromCity": "Pune",
+      "toCity": "Mumbai"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "4500",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "UA-329",
+    "city": {
+      "fromCity": "Mumbai",
+      "toCity": "Pune"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "5000",
+    "date": "Mon Dec 31 2018"
+  },
+  {
+    "flightName": "UA-883",
+    "city": {
+      "fromCity": "Pune",
+      "toCity": "Mumbai"
+    },
+    "arrivalTime": "10:24 AM",
+    "departureTime": "10:58 AM",
+    "price": "3000",
+    "date": "Mon Dec 31 2018"
+  }
+]

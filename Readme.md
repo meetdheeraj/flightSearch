@@ -1,3 +1,7 @@
+## This is a minimal React-Redux-Typescript application to search for flights from a JSON data store and display lists of flights
+
+## How it looks on initial load
+![page grab on initial load](img/onSuccessfulSearch.png)<br>
 
 ## Technology stack
 * [gulp](http://gulpjs.com/)

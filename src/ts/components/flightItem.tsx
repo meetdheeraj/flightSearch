@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { IFlight } from '../Store';
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface IFlightItemProps {
     flightItem: IFlight;

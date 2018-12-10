@@ -5,7 +5,6 @@ import { IFlightAppState, IFlight, ICity } from '../Store';
 import Flight from './flightItem';
 import NoDataContainer from './noDataComponent';
 import flightList = require('./../../json/data.json'); // tslint:disable-line
-import 'react-datepicker/dist/react-datepicker.css';
 
 interface IFlightDate {
     flightList: IFlight[];

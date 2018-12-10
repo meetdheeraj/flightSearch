@@ -8,7 +8,7 @@ exports[`<Flight /> should render successfully 1`] = `
         "fromCity": "Pune",
         "toCity": "Bangalore",
       },
-      "date": "Mon Dec 10 2018 11:15:31 GMT+0530 (IST)",
+      "date": "Mon Dec 10 2018 17:51:20 GMT+0530 (IST)",
       "price": 4456,
     }
   }

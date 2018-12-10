@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { SetCity } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight, ICity } from '../Store';
-import 'react-datepicker/dist/react-datepicker.css';
+import SelectList from './select';
 
 interface IFlightDate {
     city: ICity;
@@ -23,17 +23,10 @@ class City extends React.Component<IDateDispatchProps, IFlightDate> {
         return (
             <div className="city-container">
                 <div className="fromCity">
-                    <input
-                        className="from-city"
-                        value={this.state.city.fromCity}
-                        onChange={this.setFromCity}
-                        placeholder={'From City'} />
-                    <input
-                        className="to-city"
-                        value={this.state.city.toCity}
-                        onChange={this.setToCity}
-                        placeholder={'To City'} />
-
+                    <SelectList id="from-city" className="from-city" value={this.state.city.fromCity}
+                        onChange={this.setFromCity} />
+                    <SelectList id="to-city" className="to-city" value={this.state.city.toCity}
+                        onChange={this.setToCity} />
                 </div>
             </div>
         );

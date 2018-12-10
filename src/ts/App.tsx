@@ -6,7 +6,7 @@ import CityComponent from './components/city';
 import FlightListComponent from './components/flightList';
 
 
-interface AppStateProperties {
+interface IAppStateProperties {
 	date: string;
 	city: ICity;
 }
@@ -16,11 +16,11 @@ interface IAppState {
 	flight: IFlight;
 }
 
-interface AppDispatchProperties {
+interface IAppDispatchProperties {
 	onInputChange: Function;
 }
 
-export class App extends React.Component<AppStateProperties & AppDispatchProperties, IAppState>
+export class App extends React.Component<IAppStateProperties & IAppDispatchProperties, IAppState>
 {
 	constructor(props) {
 		super(props);
@@ -54,7 +54,7 @@ export class App extends React.Component<AppStateProperties & AppDispatchPropert
 	}
 }
 
-const mapStateToProps = (state: IFlightAppState, ownProp?: any): AppStateProperties => ({
+const mapStateToProps = (state: IFlightAppState): IAppStateProperties => ({
 	date: state.date,
 	city: state.city
 });

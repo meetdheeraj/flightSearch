@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
 import { SetDate } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight } from '../Store';
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface IFlightDate {
     date: string;

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { SetCity } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight, ICity } from '../Store';
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface IFlightDate {
     city: ICity;

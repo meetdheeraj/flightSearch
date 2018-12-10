@@ -1,4 +1,4 @@
-import { combineReducers, createStore, ReducersMapObject } from 'redux';
+import { createStore, ReducersMapObject } from 'redux';
 
 import { AppReducer, initialState } from './reducers/appReducer';
 

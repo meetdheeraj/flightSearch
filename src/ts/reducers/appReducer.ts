@@ -7,14 +7,14 @@ import { IFlightAppAction } from '../actions/AppStoreActions'
 export const initialState: IFlightAppState = {
 	date: new Date().toString(),
 	city: {
-		fromCity: "Pune",
-		toCity: "Bangalore"
+		fromCity: 'Pune',
+		toCity: 'Bangalore'
 	},
 	flightList: [
 		{
 			city: {
-				fromCity: "Pune",
-				toCity: "Bangalore"
+				fromCity: 'Pune',
+				toCity: 'Bangalore'
 			},
 			price: 1145,
 			date: new Date().toString()
@@ -23,36 +23,33 @@ export const initialState: IFlightAppState = {
 }
 
 export function AppReducer(state: IFlightAppState, action: IFlightAppAction): IFlightAppState {
-	if (typeof state == 'undefined') {
+	if (typeof state === 'undefined') {
 		return initialState;
 	}
 
-	switch (action.type) {
-		case "SET_WELCOME_MESSAGE":
-			var newState: IFlightAppState = {
-				...state,
-			}
+	let newState: IFlightAppState = {
+		...state
+	}
 
-			return object_assign({}, state, newState);
-		
-			case "SET_DATE":
-			var newState: IFlightAppState = {
+	switch (action.type) {
+		case 'SET_DATE':
+			newState = {
 				...state,
 				date: action.date
 			}
 
 			return object_assign({}, state, newState);
 
-			case "SET_CITY":
-			var newState: IFlightAppState = {
+		case 'SET_CITY':
+			newState = {
 				...state,
 				city: action.city
 			}
 
 			return object_assign({}, state, newState);
 
-			case "SET_FLIGHT_LIST":
-			var newState: IFlightAppState = {
+		case 'SET_FLIGHT_LIST':
+			newState = {
 				...state,
 				flightList: action.flightList
 			}

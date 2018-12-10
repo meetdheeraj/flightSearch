@@ -1,33 +1,29 @@
 import { Action } from 'redux';
 import { ICity, IFlight, } from '../Store';
 
-export interface IFlightAppAction extends Action
-{
+export interface IFlightAppAction extends Action {
 	date?: string;
-    city?: ICity;
+	city?: ICity;
 	flightList?: IFlight[];
 }
 
-export const SetDate = function(date: string): IFlightAppAction
-{
+export const SetDate = (date: string): IFlightAppAction => {
 	return {
-		type: "SET_DATE",
-		date: date
+		type: 'SET_DATE',
+		date
 	};
 }
 
-export const SetCity = function(city: ICity): IFlightAppAction
-{
+export const SetCity = (city: ICity): IFlightAppAction => {
 	return {
-		type: "SET_CITY",
-		city: city
+		type: 'SET_CITY',
+		city
 	};
 }
 
-export const SetFlightList = function(flightList: IFlight[]): IFlightAppAction
-{
+export const SetFlightList = (flightList: IFlight[]): IFlightAppAction => {
 	return {
-		type: "SET_FLIGHT_LIST",
-		flightList: flightList
+		type: 'SET_FLIGHT_LIST',
+		flightList
 	};
 }

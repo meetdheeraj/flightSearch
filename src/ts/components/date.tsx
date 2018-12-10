@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
-import "react-datepicker/dist/react-datepicker.css";
 import { SetDate } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight } from '../Store';
 
@@ -36,7 +35,7 @@ class DateComp extends React.Component<IDateDispatchProps, IFlightDate> {
     }
 
     private handleChange = (value) => {
-        this.setState({date: value.toDateString()}); 
+        this.setState({date: value.toDateString()});
         this.props.setDate(value.toString());
     }
 }
@@ -45,6 +44,7 @@ const mapStateToProps = (state: IFlightAppState): IFlight => ({
     date: state.date.toString()
 });
 
+// tslint:disable-next-line: no-any
 const mapDispatchToProps = (dispatch: any): IDateDispatchProps => ({
     setDate: (date: string) => {dispatch(SetDate(date))},
 });

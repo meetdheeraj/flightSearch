@@ -5,7 +5,6 @@ import DateComponent from './components/date';
 import CityComponent from './components/city';
 import FlightListComponent from './components/flightList';
 
-
 interface IAppStateProperties {
 	date: string;
 	city: ICity;
@@ -17,40 +16,41 @@ interface IAppState {
 }
 
 interface IAppDispatchProperties {
-	onInputChange: Function;
+	onInputChange: () => void;
 }
 
-export class App extends React.Component<IAppStateProperties & IAppDispatchProperties, IAppState>
-{
+export class App extends React.Component<IAppStateProperties & IAppDispatchProperties, IAppState> {
 	constructor(props) {
 		super(props);
 
-		this.state = { searched: false,
-		flight: { city: this.props.city, price: 4356, date: this.props.date } };
+		this.state = {
+			searched: false,
+			flight: { city: this.props.city, price: 4356, date: this.props.date }
+		};
 	}
-	render() {
+	public render() {
 		return (
 			<div>
 				<div id="header">
 					<DateComponent />
 					<div className="button-container"><CityComponent />
-					<button className="search-button" type="button" onClick={this.searchFlights}>Search Flights</button></div>
+						<button className="search-button" type="button" onClick={this.searchFlights}>Search Flights</button></div>
 				</div>
 				<div className="listContainer">
-				<FlightListComponent searched={this.state.searched}/>
+					<FlightListComponent searched={this.state.searched} />
 				</div>
 			</div>
 		);
 	}
 
 	public componentDidUpdate(prevProps) {
-		if (prevProps != this.props) {
+		if (prevProps !== this.props) {
 			this.setState({ flight: { city: this.props.city, price: 4356, date: this.props.date } });
 		}
 	}
 
 	public searchFlights = () => {
-		this.setState({searched: true});
+		this.setState({ searched: true });
 	}
 }
 

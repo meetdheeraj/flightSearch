@@ -2,10 +2,11 @@ import { combineReducers, createStore, ReducersMapObject } from 'redux'
 
 import { AppReducer, initialState } from './reducers/appReducer';
 
-var reducers: ReducersMapObject = {
+const reducers: ReducersMapObject = {
 	AppReducer
 }
 
+// tslint:disable-next-line: no-any
 declare var window: any;
 
 export interface ICity {
@@ -20,9 +21,9 @@ export interface IFlight {
 }
 
 export interface IFlightAppState {
-    date: string;
-    city: ICity;
-    flightList: IFlight[];
+	date: string;
+	city: ICity;
+	flightList: IFlight[];
 }
 
 export default createStore(AppReducer, initialState, window.devToolsExtension ? window.devToolsExtension() : undefined);

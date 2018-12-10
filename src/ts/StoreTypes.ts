@@ -10,7 +10,7 @@ export interface IFlight {
 }
 
 export interface IFlightAppState {
-    date: string;
-    city: ICity;
+	date: string;
+	city: ICity;
 	flightList: IFlight[];
 }

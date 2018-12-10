@@ -1,11 +1,10 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import "react-datepicker/dist/react-datepicker.css";
 import { SetFlightList } from '../actions/AppStoreActions';
 import { IFlightAppState, IFlight, ICity } from '../Store';
 import Flight from './flightItem';
 import NoDataContainer from './noDataComponent';
-var flightList = require('./../../json/data.json');
+import * as flightList from './../../json/data.json';
 
 interface IFlightDate {
     flightList: IFlight[];
@@ -45,13 +44,13 @@ class FlightList extends React.Component<IFlightListOwnProps, IFlightDate> {
     }
 
     public componentDidUpdate(prevProps) {
-        if (prevProps != this.props) {
+        if (prevProps !== this.props) {
             this.setState({ flightList: this.getFilteredFlightList(flightList) });
         }
     }
 
-    private getFilteredFlightList = (flightList) => {
-        return flightList.filter((item) => {
+    private getFilteredFlightList = (list) => {
+        return list.filter((item) => {
             return (
                 item.city.fromCity === this.props.city.fromCity
                 && item.city.toCity === this.props.city.toCity
@@ -66,11 +65,13 @@ const mapStateToProps = (state: IFlightAppState): IFlightListProps => ({
     date: state.date
 });
 
+// tslint:disable-next-line: no-any
 const mapDispatchToProps = (dispatch: any): IDateDispatchProps => ({
-    setFlightList: (flightList: IFlight[]) => { dispatch(SetFlightList(flightList)) },
+    setFlightList: (list: IFlight[]) => { dispatch(SetFlightList(list)) },
 });
 
 export { IFlightListOwnProps };
 
-const FlightListComponent = connect<IFlightListProps, IDateDispatchProps, IFlightListOwnProps, IFlightAppState>(mapStateToProps, mapDispatchToProps)(FlightList);
+const FlightListComponent = connect<IFlightListProps,
+    IDateDispatchProps, IFlightListOwnProps, IFlightAppState>(mapStateToProps, mapDispatchToProps)(FlightList);
 export default FlightListComponent;

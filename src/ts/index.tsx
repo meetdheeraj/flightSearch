@@ -17,5 +17,5 @@ ReactDom.render(
 			</Switch>
 		</Router>
 	</Provider>,
-	document.getElementById("appContainer")
+	document.getElementById('appContainer')
 );

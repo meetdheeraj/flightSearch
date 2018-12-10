@@ -1,9 +1,8 @@
 import * as React from 'react';
 
-export class NotFound extends React.Component<any, any>
-{
-	render()
-	{
+// tslint:disable-next-line: no-any
+export class NotFound extends React.Component<any, any> {
+	public render() {
 		return <h1>Not Found</h1>;
 	}
 }
